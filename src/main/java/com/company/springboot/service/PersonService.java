@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.company.springboot.database.PersonDatabase;
 import com.company.springboot.model.Person;
@@ -21,6 +22,11 @@ public class PersonService {
 	
 	public List<Person> getPersons(){
 		return new ArrayList<>(persons.values());
+	}
+	
+	public Person getPerson(int id) {
+		return persons.get(id);
+		
 	}
 	
 	
